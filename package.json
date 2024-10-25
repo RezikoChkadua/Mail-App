@@ -1,0 +1,20 @@
+{
+  "name": "MailApp",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Reziko Tchkadua",
+  "description": "Mail App using React and Node for assessment",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "backend": "yarn workspace @monorepo/express-backend",
+    "frontend": "yarn workspace @monorepo/react-frontend",
+    "start": "concurrently --names \"backend,frontend\" \"yarn backend start\" \"yarn frontend start\""
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "dependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
